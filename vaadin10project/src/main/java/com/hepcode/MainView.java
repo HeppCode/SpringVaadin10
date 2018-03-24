@@ -11,18 +11,12 @@ import com.vaadin.flow.theme.lumo.Lumo;
 /**
  * The main view contains a button and a template element.
  */
-@BodySize(height = "100vh", width = "100vw")
-@HtmlImport("styles/shared-styles.html")
+
 @Route("")
 @Theme(Lumo.class)
 public class MainView extends VerticalLayout {
 
     public MainView() {
-        ExampleTemplate template = new ExampleTemplate();
 
-        Button button = new Button("Click me", event -> template.setValue("Clicked!"));
-
-        add(button, template);
-        setClassName("main-layout");
     }
 }
